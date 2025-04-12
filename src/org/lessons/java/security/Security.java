@@ -31,13 +31,25 @@ public class Security {
         int annoNascita = input.nextInt();
 
         int sommaData = giornoNascita + meseNascita + annoNascita;
-// aggiungo generatore numero randomico
+        // aggiungo generatore numero randomico
         Random numero = new Random();
         int max = 5000;
         int result = numero.nextInt(max);
         System.out.println("numero randomico =" + result);
 
         int randomData = result + sommaData;
+        // voglio capire se il numero chemi stampa è pari o dispari...
+        // mi cereo ilmio ciclo if
+        // se è divisibile per due allora sarà pari
+        // altrimenti sarà dispari
+
+        if (randomData % 2 == 0) {
+            System.out.println("il numero è pari");
+
+        } else {
+            System.out.println("il numero è dispari");
+
+        }
 
         // Generazione della password concatenando i dati
         String password = nome + "-" + cognome + "-" + colorePreferito + "-" + randomData;
